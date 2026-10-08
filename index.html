@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff7e9">
+  <title>Little Oven — Baking Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Little Oven home"><span class="brand-mark">♨</span> little oven</a>
+      <div class="wallet"><span>🪙</span> <span id="coins">0</span></div>
+    </header>
+
+    <section class="intro">
+      <div>
+        <p class="eyebrow">YOUR COZY CORNER BAKERY</p>
+        <h1>Make something <em>sweet.</em></h1>
+        <p class="subtitle">Pick a recipe, gather your ingredients, and bake!</p>
+      </div>
+      <div class="streak-card"><span class="streak-icon">✦</span><span><strong id="baked-count">0</strong><small>treats baked</small></span></div>
+    </section>
+
+    <section class="workbench" aria-label="Baking workbench">
+      <div class="scene">
+        <div class="scene-sun"></div><div class="shelf shelf-one"></div><div class="shelf shelf-two"></div>
+        <div class="jar jar-one"><span>🌾</span></div><div class="jar jar-two"><span>🍬</span></div><div class="plant">🌿</div>
+        <div class="window"><div class="window-sun"></div><div class="window-cross"></div></div>
+        <div class="counter"></div>
+        <div class="mixing-bowl" id="bowl"><div class="batter" id="batter"></div><div class="bowl-rim"></div><span class="whisk">🥄</span></div>
+        <div class="flour-sack">🌾<small>FLOUR</small></div>
+        <div class="scene-caption" id="scene-caption">A fresh batch starts here</div>
+      </div>
+
+      <div class="recipe-panel">
+        <div class="panel-heading"><div><p class="eyebrow">TODAY'S MENU</p><h2>Choose a recipe</h2></div><span class="menu-sparkle">✿</span></div>
+        <div class="recipe-list" id="recipe-list"></div>
+        <div class="recipe-detail" id="recipe-detail"></div>
+      </div>
+    </section>
+
+    <section class="howto"><span class="howto-icon">💡</span><span><strong>How to play</strong><br>Choose a recipe and tap each ingredient to add it to your bowl. Then bake your treat!</span></section>
+    <footer>Made with a little sugar and a lot of love <span>♡</span></footer>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="game.js"></script>
+</body>
+</html>
